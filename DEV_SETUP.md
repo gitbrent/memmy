@@ -22,7 +22,7 @@ git clone https://github.com/memmy-app/memmy
 
 ## Dependencies
 
-The build instructions for memmy are basically have yarn install dependencies and setup the project with CocoaPods.
+The build instructions for memmy are basically: have yarn install dependencies and setup the project with CocoaPods.
 
 ```shell
 cd memmy
@@ -36,9 +36,7 @@ pod install
 npx pod install
 ```
 
-The shipped version of macOS (currently Ventura, 13.4) requires some addtional setup before the pod command can be successfully executed.
-
-For example, if you run the `npx pod install` command above you'll likely see "ENDENT: No such file or directory, chmod" errors as CocoaPods is not installed.
+The shipped version of macOS (currently Ventura, 13.4) requires some addtional setup before the yarn and pod commands can be successfully executed.
 
 ### CocoaPods
 
@@ -105,7 +103,7 @@ cd ios
 pod install
 ```
 
-### Errors
+### Pod Troubleshooting
 
 If the installation process fails on the `glog` package similar to the following example, follow the instructions below.
 
@@ -177,9 +175,9 @@ a - run on Android
 
 Press "i" to open the iPhone simulator.
 
-Code changes should be reflected in the app, if not, press -D to bring up the developer menu and choose "Refresh".
+Code changes should be reflected in the app, if not, press ⌘-D to bring up the developer menu and choose "Refresh".
 
-### Troubleshooting
+### Metro Troubleshooting
 
 If the simulator window shows a white screen with the title "There was a problem loading the project" and details showing "Unhandled JS Exception: Property 'queueMicrotask' doesn't exist." try using the following command instead.
 
