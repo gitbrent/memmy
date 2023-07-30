@@ -26,10 +26,11 @@ function MTable({ header, children }: IProps) {
           space="md"
         >
           {childrenArray.map((child, index) => (
-            <>
+            // eslint-disable-next-line react/no-array-index-key
+            <React.Fragment key={`MTableRow${index}`}>
               {index !== 0 && <Divider backgroundColor={theme.colors.border} />}
               {child}
-            </>
+            </React.Fragment>
           ))}
         </VStack>
       </>
